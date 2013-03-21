@@ -14,10 +14,10 @@
 	h1,h2,li,a,p {
 		font-family: Liberation Sans,Arial;
 		text-align:center;
-		margin:5px;
 	}
 	li {
 		list-style:none;
+		margin:20px 0;
 	}
 	h1 {
 		background: linear-gradient(#FAFAFA, #EAEAEA) repeat scroll 0 0 transparent;
@@ -26,12 +26,25 @@
 		border-bottom: 1px solid #E5E5E5;
 		text-shadow: 0 1px 0 #FFFFFF;
 	}
-	.options {
+	.options, .github {
 		background-color: #F8F8F8;
 		border: 1px solid #EAEAEA;
 		border-radius: 3px 3px 3px 3px;
 		margin: 5px 2px;
-		padding: 0 5px;
+		padding: 2px 5px;
+	}
+	a.out {
+		background-image:url('linkout.png');
+		background-repeat:no-repeat;
+		background-position: left center;
+		padding-left:15px;
+	}
+	a {
+		color: #4183C4;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration:underline;
 	}
 </style>
 </head>
@@ -39,11 +52,8 @@
 	<h1>This is the page of quelbs</h1>
 	<h2>Here is a list of github projects I am working on</h2>
 	<ul>
-		<li><a class="options" href="https://github.com/quelbs/maperitive-rulesets/">https://github.com/quelbs/maperitive-rulesets</a></li>
-		<li><a class="options" href="https://github.com/quelbs/cyclotron">https://github.com/quelbs/cyclotron</a></li>
+		<li>Managing <a class="github" href="https://github.com/quelbs/maperitive-rulesets/">Maperitive Rulesets</a> for <a class="out" href="http://maperitive.net/">Maperitive</a>, desktop application for drawing maps based on <a class="out" href="http://osm.org">OpenStreetMap</a> and GPS data. Some <a href="/maperitive/">Demo Renderings</a> are available on this page.</li>
+		<li><a class="options" href="https://github.com/quelbs/cyclotron">Cyclotron</a> is a viewer for cylindric panoramas. It is able to display continuous panorama images as well as partly panoramas. If you want to have a look, you can have a look at <a href="/cyclotron">some panorama pictures of me</a>.</li>
 	</ul>
-	<p>
-		more information will follow...
-	</p>
 </body>
 </html>
