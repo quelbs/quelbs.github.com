@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="de" />
+<meta name="copyright" content="quelbs" />
+<meta name="description" content="Cyclotron - see panorama images with touch and mouse interface" />
+<title>Cyclotron - panorama images viewer</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.cyclotron.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.default').cyclotron();
+		$('.auto360').cyclotron({dampingFactor:1,autorotation:1});
+		$('.nonc').cyclotron({continuous:0});
+		$('.noncauto').cyclotron({continuous:0,dampingFactor:1,autorotation:1});
+	});
+</script>
+<style>
+	h1,h2,.center {
+		font-family: Liberation Sans,Arial;
+		text-align:center;
+		margin:5px;
+	}
+	.pano {
+		height:250px; width:500px; margin:auto;
+	}
+	.floater {
+		min-width:500px;
+		width:50%;
+		float:left;
+	}
+	.options {
+		background-color: #F8F8F8;
+		border: 1px solid #EAEAEA;
+		border-radius: 3px 3px 3px 3px;
+		margin: 5px 2px;
+		padding: 0 5px;
+	}
+</style>
+</head>
+<body>
+	<h1>Cyclotron - a jQuery plugin to display cylindrical panorama images</h1>
+	<p class="center">
+		Code of this Cyclotron fork is available at <a href="https://github.com/quelbs/cyclotron">https://github.com/quelbs/cyclotron</a>.
+	</p>
+	<div class="floater">
+		<h2>Panorama moveable with mouse and touch events</h2>
+		<div class="center">
+			<span class="options">.cyclotron();</span>
+		</div>
+		<div class="pano default" style="background-image:url('images/360SwissAlps.jpg');"></div>
+	</div>
+	<div class="floater">
+		<h2>Panorama with autorotate and no damping of movement</h2>
+		<div class="center">
+			<span class="options">.cyclotron({dampingFactor:1,autorotation:1});</span>
+		</div>
+		<div class="pano auto360" style="background-image:url('images/360SwissAlps.jpg');"></div>
+	</div>
+	<div class="floater">
+		<h2>non-continuous panorama</h2>
+		<div class="center">
+			<span class="options">.cyclotron({continuous:0});</span>
+		</div>
+		<div class="pano nonc" style="background-image:url('images/Foostock.jpg');"></div>
+	</div>
+	<div class="floater">
+		<h2>non-continuous panorama autorotate</h2>
+		<div class="center">
+			<span class="options">.cyclotron({continuous:0,dampingFactor:1,autorotation:1});</span>
+		</div>
+		<div class="pano noncauto" style="background-image:url('images/Foostock.jpg');"></div>
+	</div>
+</body>
+</html>
